@@ -7,7 +7,7 @@ import { books } from "./components/data/books";
 
 export default function App() {
   const [allBooks, setAllBooks] = useState(books);
-  const [to, setTo] = useState("");
+  const [sortOption, setSortOption] = useState("");
   const [searchBook, setSearchBook] = useState(books);
 
   function onSearch(searchChar) {
@@ -24,7 +24,7 @@ export default function App() {
     }
   }
   useEffect(() => {
-    if (to === "name_asc") {
+    if (sortOption === "name_asc") {
       const sortBooks = [...searchBook].sort((a, b) => {
         if (a.title < b.title) {
           return -1;
@@ -35,7 +35,7 @@ export default function App() {
         return 0;
       });
       setAllBooks(sortBooks);
-    } else if (to === "name_desc") {
+    } else if (sortOption === "name_desc") {
       const sortBooks = [...searchBook].sort((b, a) => {
         if (a.title < b.title) {
           return -1;
@@ -46,24 +46,39 @@ export default function App() {
         return 0;
       });
       setAllBooks(sortBooks);
-    } else if (to === "year_asc") {
+    } else if (sortOption === "year_asc") {
       const sortBooks = [...searchBook].sort(
         (a, b) => a.publicationYear - b.publicationYear
       );
       setAllBooks(sortBooks);
-    } else if (to === "year_desc") {
+    } else if (sortOption === "year_desc") {
       const sortBooks = [...searchBook].sort(
         (b, a) => a.publicationYear - b.publicationYear
       );
       setAllBooks(sortBooks);
     }
-  }, [searchBook, to]);
+  }, [searchBook, sortOption]);
 
+function handleToggleFav(bookId){
+  setAllBooks(
+    allBooks.map((book) => {
+      if (book.id === bookId) {
+        return { ...book, isFavourite: !book.isFavourite };
+      } else {
+        return book;
+      }
+    })
+  );
+}
   return (
     <div className="">
       <Navbar />
-      <Header onSearch={onSearch} to={to} setTo={setTo} />
-      <BookContainer allBooks={allBooks} />
+      <Header
+        onSearch={onSearch}
+        sortOption={sortOption}
+        setSortOption={setSortOption}
+      />
+      <BookContainer allBooks={allBooks} handleToggleFav={handleToggleFav} />
       <Footer />
     </div>
   );
