@@ -10,7 +10,7 @@ export default function SingleBook({book}) {
     {/* <!-- info --> */}
     <div className="space-y-3">
       <h4 className="text-lg font-bold lg:text-xl">
-        {book.title}
+        {book.title} ({book.publicationYear})
       </h4>
       <p className="text-xs lg:text-sm">
         By : <span>{book.author}</span>

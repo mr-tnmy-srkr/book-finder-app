@@ -1,5 +1,4 @@
-import lwsLogo from "./assets/lws-logo-en.svg"
-
+import lwsLogo from "../assets/lws-logo-en.svg"
 const Navbar= () => {
   return (
     <nav className="py-6 ">
