@@ -59,17 +59,17 @@ export default function App() {
     }
   }, [searchBook, sortOption]);
 
-function handleToggleFav(bookId){
-  setAllBooks(
-    allBooks.map((book) => {
-      if (book.id === bookId) {
-        return { ...book, isFavourite: !book.isFavourite };
-      } else {
-        return book;
-      }
-    })
-  );
-}
+  function handleToggleFav(bookId) {
+    setAllBooks(
+      allBooks.map((book) => {
+        if (book.id === bookId) {
+          return { ...book, isFavourite: !book.isFavourite };
+        } else {
+          return book;
+        }
+      })
+    );
+  }
   return (
     <div className="">
       <Navbar />
@@ -79,7 +79,7 @@ function handleToggleFav(bookId){
         setSortOption={setSortOption}
       />
       <BookContainer allBooks={allBooks} handleToggleFav={handleToggleFav} />
-      <Footer />
+      <Footer booksLength={allBooks.length} />
     </div>
   );
 }

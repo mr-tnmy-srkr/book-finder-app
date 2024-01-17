@@ -1,10 +1,14 @@
 import { FaStar } from "react-icons/fa6";
-export default function SingleBook({ book,handleToggleFav }) {
+export default function SingleBook({ book, handleToggleFav }) {
   return (
     <div className="space-y-3">
       {/* <!-- thumbnail --> */}
       <div className="flex items-center justify-center rounded-md border border-[#324251]/30 bg-white p-4">
-        <img className="max-w-[144px]" src={book.image} alt="book name" />
+        <img
+          className="object-contain h-72 "
+          src={book.image}
+          alt="book name"
+        />
       </div>
       {/* <!-- info --> */}
       <div className="space-y-3">
@@ -50,7 +54,7 @@ export default function SingleBook({ book,handleToggleFav }) {
               book.isFavourite &&
               "bg-[#DC2954]/[14%] text-[#DC2954] hover:bg-[#DC2954]/[24%]"
             }`}
-            onClick={()=>handleToggleFav(book.id)}
+            onClick={() => handleToggleFav(book.id)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

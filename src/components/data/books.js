@@ -5,7 +5,7 @@ export const books = [
     author: "Jon Duckett",
     publicationYear: 2020,
     price: 62,
-    image: "https://picsum.photos/200/300",
+    image: "https://i.ibb.co/jVsPSgW/61u7p-EHMZUL-SY425.jpg",
     isFavourite: false,
   },
   {
@@ -14,7 +14,7 @@ export const books = [
     author: "Mark Tielens Thomas",
     publicationYear: 2021,
     price: 45,
-    image: "https://picsum.photos/200/300",
+    image: "https://i.ibb.co/q9tTmtz/Thomas-React-HI.jpg",
     isFavourite: true,
   },
   {
@@ -23,7 +23,7 @@ export const books = [
     author: "Eric Matthes",
     publicationYear: 2019,
     price: 50,
-    image: "https://picsum.photos/200/300",
+    image: "https://i.ibb.co/6ZYs7T0/71pys4-B4-OVL-AC-UF1000-1000-QL80.jpg",
     isFavourite: false,
   },
   {
@@ -32,7 +32,8 @@ export const books = [
     author: "Andrew Hunt and David Thomas",
     publicationYear: 2020,
     price: 55,
-    image: "https://picsum.photos/200/300",
+    image:
+      "https://i.ibb.co/MDv5h4b/images-q-tbn-ANd9-Gc-Qmze-Z64t-PT8cr-YL9k-GCKSY4-WDFZZp-G5-Ac-CYw-usqp-CAU.jpg",
     isFavourite: true,
   },
   {
@@ -41,7 +42,7 @@ export const books = [
     author: "Robert C. Martin",
     publicationYear: 2008,
     price: 40,
-    image: "https://picsum.photos/200/300",
+    image: "https://i.ibb.co/Fhs0qzF/51-E2055-ZGUL-SL1000.jpg",
     isFavourite: false,
   },
   {
@@ -50,7 +51,7 @@ export const books = [
     author: "Don Norman",
     publicationYear: 2013,
     price: 48,
-    image: "https://picsum.photos/200/300",
+    image: "https://i.ibb.co/80dfdfH/61e3-Mz-WRwm-L-SY425.jpg",
     isFavourite: true,
   },
   {
@@ -59,7 +60,7 @@ export const books = [
     author: "Stuart Russell",
     publicationYear: 2022,
     price: 65,
-    image: "https://picsum.photos/200/300",
+    image: "https://i.ibb.co/vdrwgfR/61-6-TTTBZe-L-SL1000.jpg",
     isFavourite: false,
   },
   {
@@ -68,7 +69,8 @@ export const books = [
     author: "Marijn Haverbeke",
     publicationYear: 2018,
     price: 38,
-    image: "https://picsum.photos/200/300",
+    image:
+      "https://i.ibb.co/pzGnbd1/eloquent-javascript-3rd-edition-original-imagg7z7ztkcgagw.jpg",
     isFavourite: true,
   },
 ];
